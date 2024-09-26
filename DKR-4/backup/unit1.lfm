@@ -1,0 +1,179 @@
+object Fmain: TFmain
+  Left = 442
+  Height = 240
+  Top = 255
+  Width = 332
+  Caption = 'Поделки'
+  ClientHeight = 240
+  ClientWidth = 332
+  Color = clMedGray
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '3.2.0.0'
+  object Naimen: TLabel
+    AnchorSideRight.Control = Izdelie
+    AnchorSideBottom.Side = asrBottom
+    Left = 89
+    Height = 20
+    Top = 24
+    Width = 68
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Bottom = 1
+    BorderSpacing.Around = 10
+    Caption = 'Название'
+    OnClick = NaimenClick
+  end
+  object Met: TLabel
+    AnchorSideRight.Control = Metall
+    AnchorSideBottom.Side = asrBottom
+    Left = 88
+    Height = 20
+    Top = 56
+    Width = 69
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Материал'
+  end
+  object Nal: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = LightCheckbox
+    AnchorSideBottom.Control = Raz
+    AnchorSideBottom.Side = asrBottom
+    Left = 85
+    Height = 20
+    Top = 90
+    Width = 69
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 75
+    BorderSpacing.Right = 75
+    BorderSpacing.Bottom = 20
+    BorderSpacing.Around = 10
+    Caption = 'На складе'
+  end
+  object LightCheckbox: TCheckBox
+    AnchorSideLeft.Control = Nal
+    AnchorSideTop.Control = Met
+    AnchorSideTop.Side = asrBottom
+    AnchorSideBottom.Control = Razmer
+    Left = 170
+    Height = 20
+    Top = 92
+    Width = 21
+    Anchors = [akLeft, akBottom]
+    BorderSpacing.Left = 80
+    BorderSpacing.Around = 5
+    TabOrder = 0
+  end
+  object Raz: TLabel
+    AnchorSideRight.Control = Razmer
+    AnchorSideBottom.Side = asrBottom
+    Left = 106
+    Height = 20
+    Top = 120
+    Width = 51
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Размер'
+    OnClick = RazClick
+  end
+  object Stoimost: TLabel
+    AnchorSideRight.Control = Cena
+    AnchorSideBottom.Side = asrBottom
+    Left = 121
+    Height = 20
+    Top = 150
+    Width = 36
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 10
+    Caption = 'Цена'
+  end
+  object Nextt: TButton
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 204
+    Height = 28
+    Top = 192
+    Width = 108
+    Anchors = [akRight, akBottom]
+    BorderSpacing.Around = 20
+    Caption = 'Следующий'
+    TabOrder = 1
+    OnClick = NexttClick
+  end
+  object Previouss: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 20
+    Height = 30
+    Top = 190
+    Width = 118
+    Anchors = [akLeft, akBottom]
+    AutoSize = True
+    BorderSpacing.Around = 20
+    Caption = 'Предыдущий'
+    TabOrder = 2
+    OnClick = PrevioussClick
+  end
+  object Izdelie: TEdit
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Metall
+    Left = 167
+    Height = 30
+    Top = 20
+    Width = 160
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 15
+    BorderSpacing.Around = 5
+    TabOrder = 3
+    OnChange = IzdelieChange
+  end
+  object Metall: TEdit
+    AnchorSideTop.Control = Naimen
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = LightCheckbox
+    Left = 167
+    Height = 32
+    Top = 55
+    Width = 160
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 4
+  end
+  object Razmer: TEdit
+    AnchorSideTop.Control = Nal
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Cena
+    Left = 167
+    Height = 28
+    Top = 117
+    Width = 160
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 5
+  end
+  object Cena: TEdit
+    AnchorSideTop.Control = Raz
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Nextt
+    Left = 167
+    Height = 22
+    Top = 150
+    Width = 160
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    TabOrder = 6
+  end
+end
